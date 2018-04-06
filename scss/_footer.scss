@@ -1,0 +1,27 @@
+.footerDiv{
+  background:#1B2021;
+  justify-content:center;
+  border-top: solid .15em #fdb714;
+  padding-top: 1em;
+}
+
+  .footerDiv a:link, .footerDiv a:visited, .footerDiv a:active{
+    color: #fdb714;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .footerDiv a:hover{
+    text-decoration: underline;
+    
+  }
+
+   .footerDiv p{
+    color:#e8e8e8;
+    font-size: .75em;
+    text-align: center;
+   }
+
+   .bottomSpacer{
+    margin-bottom: 50em;
+   }

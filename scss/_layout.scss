@@ -1,0 +1,55 @@
+#mainContent{
+	display: grid;
+	grid-template-columns: repeat(6,1fr);
+	grid-template-areas: 
+		'carousel	carousel	carousel	carousel	carousel	carousel'
+		'mainBanner	mainBanner	mainBanner	mainBanner	mainBanner	mainBanner'
+		'spBox		spBox		spBox		dpBox		dpBox		dpBox'
+		'rlfBox		rlfBox		rlfBox		cffBox		cffBox		cffBox'
+		'pcBox		pcBox		pcBox		mcBox		mcBox		mcBox'
+		;
+	justify-items:end;
+	background-color: #fff;
+	border-right: solid .25em #fdb714;
+	border-left: solid .25em #fdb714;
+	border-top: solid .25em #fdb714;
+	padding-bottom: 3em;
+
+	@media (max-width: $bp-large) {
+		width:1170;
+		background-color: red;
+	}
+}
+
+#carouselContainer{
+	grid-area:carousel;
+}
+
+#mainBanner{
+	grid-area:mainBanner;
+}
+
+#spBox{
+	grid-area:spBox;
+}
+
+#dpBox{
+	grid-area:dpBox;
+}
+
+#rlfBox{
+	grid-area:rlfBox;
+}
+
+#cffBox{
+	grid-area:cffBox
+}
+
+#pcBox{
+	grid-area:pcBox;
+}
+
+#mcBox{
+	grid-area:mcBox;
+}
+

@@ -1,1 +1,490 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900|Patua+One|Racing+Sans+One);#mainContent,#outerDiv{min-height:100vh}body{background-color:#333;font-family:Lato,sans-serif;padding-top:2em;-webkit-font-smoothing:antialiased}h2,h3,h4,h5{font-family:'Patua One',sans-serif}.newAPBanner,.pageHeader{font-family:'Racing Sans One',times}h2{font-size:1.25em}.orgInfoBar{background-color:#444;border-bottom:solid .1em #fdb714}.orgInfo{color:#eee;text-align:right;margin:.25em 2em 0 0}.redTxt{color:#be1e2d}.yellowTxt{color:#fdb714}#carouselContainer{display:none}#mainContent{background-color:#fff;border-right:solid .25em #fdb714;border-left:solid .25em #fdb714;border-top:solid .25em #fdb714;padding-bottom:3em}.logoSolo{padding:.5em 0 0 4.75em}.pageHeader{color:#333;margin:3em 0 1em;padding-left:1em;border-bottom:solid .05em #be1e2d;font-size:1.5em;z-index:1000}.homeBox{padding:1em}.homeBoxHeader,.sectionTab{font-size:1.5em;font-variant:small-caps;background-color:#333;border-bottom:solid .1em #fdb714;padding:.05em 1em;display:inline-block;border-top-right-radius:10px}.homeBoxHeader{color:#fff;border-top-left-radius:10px;width:100%}.sectionTab{border-right:solid .1em #111;border-top:solid .05em #111;color:#fdb714;margin-left:-.8em;box-shadow:1px 3px 2px rgba(0,27,49,.5)}.carousel-inner>.item>img{margin:0 auto}.homeBox .btn,.homeBox img{margin-bottom:1em}.frameStyle{margin-right:.5em}.underline .btn{margin-bottom:.25em}.frameStyle img{max-width:163px;margin-bottom:.5em}.underline{border-bottom:solid .25em #eee;margin-bottom:2em}.templateBox{padding-top:6em}.pricingInfoHeader{border-bottom:solid .1em #333}table{font-size:.5em;font-weight:700}.productImage{margin-top:1em;margin-bottom:1em;max-width:250px}.priceCode{font-size:.65em;font-weight:900;border-radius:25px;border:.1em solid #888;padding:.15em .2em;vertical-align:super}caption{margin-left:-1000px}.footerDiv{background:#1B2021;justify-content:center;border-top:solid .15em #fdb714;padding-top:1em}.footerDiv a:active,.footerDiv a:link,.footerDiv a:visited{color:#fdb714;text-align:center;font-weight:100}.footerDiv a:hover{text-decoration:underline}.footerDiv p{color:#e8e8e8;font-size:.75em;text-align:center}.bottomSpacer{margin-bottom:50em}@media (min-width:450px){::-webkit-scrollbar{width:1em;background:#777}::-webkit-scrollbar-thumb{background:#bbb}table{font-size:.75em;font-weight:initial}.pageHeader{font-family:'Racing Sans One',times;font-size:2em;-webkit-mask-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,1)),color-stop(75%,rgba(0,0,0,.5)),to(rgba(0,0,0,1)))}.sectionTab{font-size:2.5em}.productImage{max-width:300px}}@media (min-width:600px){#carouselContainer{display:block;margin:0 -2.15em;z-index:1000}table{padding-left:2em}.pageHeader{font-size:2.75em;margin-top:2em}.productImage{width:250px}}@media (min-width:992px){table{font-size:initial}.pageHeader{font-size:4em;margin-top:1.5em}.homeBoxHeader{background-color:#333;font-size:2em}.newAPBanner{font-size:4em}}.note{font-style:italic;}
+/*Dark Grey: #333	   | RGB  51,51,51
+Dark Grey: #333	   | RGB  51,51,51
+Yellow:    #fdb714 | RGB  253,183,20
+Red:       #be1e2d | RGB  190,30,45*/
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900|Patua+One|Racing+Sans+One");
+:root {
+  /*colors */
+  --dark-grey:#333;
+  --yellow:#fdb714;
+  --red:#be1e2d; }
+
+#mainContent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas: "carousel	carousel	carousel	carousel	carousel	carousel" "mainBanner	mainBanner	mainBanner	mainBanner	mainBanner	mainBanner" "spBox		spBox		spBox		dpBox		dpBox		dpBox" "rlfBox		rlfBox		rlfBox		cffBox		cffBox		cffBox" "pcBox		pcBox		pcBox		mcBox		mcBox		mcBox";
+  justify-items: end;
+  background-color: #fff;
+  border-right: solid .25em #fdb714;
+  border-left: solid .25em #fdb714;
+  border-top: solid .25em #fdb714;
+  padding-bottom: 3em; }
+  @media (max-width: 1200px) {
+    #mainContent {
+      width: 1170;
+      background-color: red; } }
+
+#carouselContainer {
+  grid-area: carousel; }
+
+#mainBanner {
+  grid-area: mainBanner; }
+
+#spBox {
+  grid-area: spBox; }
+
+#dpBox {
+  grid-area: dpBox; }
+
+#rlfBox {
+  grid-area: rlfBox; }
+
+#cffBox {
+  grid-area: cffBox; }
+
+#pcBox {
+  grid-area: pcBox; }
+
+#mcBox {
+  grid-area: mcBox; }
+
+/*********************************************************************
+Navbar recolor
+*/
+.navbar-default a {
+  background-color: #333;
+  font-size: 1.25em; }
+
+.logoRow {
+  position: relative; }
+
+.navbar-default {
+  background: #333131;
+  border-color: #4d4d4f; }
+
+.navbar-default .navbar-brand {
+  color: #ecf0f1; }
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #fdfcfb; }
+
+.navbar-default .navbar-text {
+  color: #ecf0f1; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #4d4d4f;
+  background-color: #fdb714; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu {
+  background-color: #333131; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a {
+  color: #ecf0f1; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:hover,
+.navbar-default .navbar-nav > li > .dropdown-menu > li > a:focus {
+  color: #4d4d4f;
+  background-color: #fdb714; }
+
+.navbar-default .navbar-nav > li > .dropdown-menu > li > .divider {
+  background-color: #f62813; }
+
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fdfcfb;
+  background-color: #f62813; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #fdfcfb;
+  background-color: #f62813; }
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #fdfcfb;
+  background-color: #4d4d4f; }
+
+.navbar-default .navbar-toggle {
+  border-color: #4d4d4f; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #f62813; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1; }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1; }
+
+.navbar-default .navbar-link {
+  color: #ecf0f1; }
+
+.navbar-default .navbar-link:hover {
+  color: #fdfcfb; }
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #ecf0f1; }
+
+/*@media (min-width: 992px) {
+
+
+*/
+/*********************************************************************
+Navbar recolor END
+*/
+/*********************************************************************
+small-logo / big-logo
+*/
+.small-logo-container {
+  padding-top: 50px;
+  height: 50px;
+  overflow: hidden;
+  position: absolute; }
+
+.small-logo {
+  color: white;
+  font-size: 2.5em;
+  padding: .25em 0 .5em 2em; }
+
+/* *********************************
+           Big Logo
+  ********************************** */
+.big-logo-container p {
+  display: inline;
+  padding-left: 2em;
+  color: white; }
+
+.big-logo-container img {
+  display: inline-block; }
+
+.big-logo-row {
+  background: #333131; }
+
+.big-logo-row .big-logo-container {
+  padding: 1em 0 .5em 1em; }
+
+.big-logo-row h1 {
+  font-size: 4em;
+  margin: 0;
+  padding: 0 0 15px 0;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+/******* COLORS ************
+
+Dark Grey: #333	   | RGB  51,51,51
+Dark Grey: #333	   | RGB  51,51,51
+Yellow:    #fdb714 | RGB  253,183,20
+Red:       #be1e2d | RGB  190,30,45
+***********/
+/*********************************************************************
+top styles
+*/
+body {
+  background-color: #333;
+  font-family: 'Lato', sans-serif;
+  padding-top: 2em;
+  -webkit-font-smoothing: antialiased; }
+
+#outerDiv {
+  min-height: 100vh; }
+
+h2, h3, h4, h5 {
+  font-family: 'Patua One', sans-serif; }
+
+h2 {
+  font-size: 1.25em; }
+
+.orgInfoBar {
+  background-color: #444;
+  border-bottom: solid .1em #fdb714; }
+
+.orgInfo {
+  color: #eee;
+  text-align: right;
+  margin: .25em 2em 0 0; }
+
+.redTxt {
+  color: #be1e2d; }
+
+.yellowTxt {
+  color: #fdb714; }
+
+#carouselContainer {
+  display: none; }
+
+.note {
+  font-style: italic; }
+
+/*********************************************************************
+main content styles
+*/
+.newAPBanner {
+  font-family: 'Racing Sans One', times; }
+
+.logoSolo {
+  padding: .5em 0 0 4.75em; }
+
+.pageHeader {
+  font-family: 'Racing Sans One', times;
+  color: #333;
+  margin: 3em 0 1em 0;
+  padding-left: 1em;
+  border-bottom: solid .05em #be1e2d;
+  font-size: 1.5em;
+  z-index: 1000; }
+
+.homeBox {
+  padding: 1em; }
+
+.homeBoxHeader {
+  font-size: 1.5em;
+  font-variant: small-caps;
+  background-color: #333;
+  border-bottom: solid .1em #fdb714;
+  color: #fff;
+  padding: .05em  1em;
+  display: inline-block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%; }
+
+.sectionTab {
+  font-size: 1.5em;
+  font-variant: small-caps;
+  background-color: #333;
+  border-right: solid .1em #111;
+  border-top: solid .05em #111;
+  border-bottom: solid .1em #fdb714;
+  color: #fdb714;
+  padding: .05em  1em;
+  display: inline-block;
+  border-top-right-radius: 10px;
+  margin-left: -.8em;
+  box-shadow: 1px 3px 2px rgba(0, 27, 49, 0.5); }
+
+.carousel-inner > .item > img {
+  margin: 0 auto; }
+
+.homeBox .btn, .homeBox img {
+  margin-bottom: 1em; }
+
+.frameStyle {
+  margin-right: .5em; }
+
+.underline .btn {
+  margin-bottom: .25em; }
+
+.frameStyle img {
+  max-width: 163px;
+  margin-bottom: .5em; }
+
+.underline {
+  border-bottom: solid .25em #eee;
+  margin-bottom: 2em; }
+
+.templateBox {
+  padding-top: 6em; }
+
+.pricingInfoHeader {
+  border-bottom: solid .1em #333; }
+
+table {
+  font-size: .5em;
+  font-weight: bold; }
+
+.productImage {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  max-width: 250px; }
+
+.priceCode {
+  font-size: .65em;
+  font-weight: 900;
+  border-radius: 25px;
+  border: .1em solid #888;
+  padding: .15em .2em;
+  vertical-align: super; }
+
+caption {
+  margin-left: -1000px; }
+
+/*Footer
+********************************************************/
+/*Media Queries
+********************************************************/
+@media (min-width: 450px) {
+  ::-webkit-scrollbar {
+    width: 1em;
+    background: #777; }
+
+  ::-webkit-scrollbar-thumb {
+    background: #bbb; }
+
+  table {
+    font-size: .75em;
+    font-weight: initial; }
+
+  .pageHeader {
+    font-family: 'Racing Sans One', times;
+    font-size: 2em;
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(black), color-stop(75%, rgba(0, 0, 0, 0.5)), to(black)); }
+
+  .sectionTab {
+    font-size: 2.5em; }
+
+  .productImage {
+    max-width: 300px; } }
+@media (min-width: 600px) {
+  #carouselContainer {
+    display: block;
+    margin: 0 -2.15em;
+    z-index: 1000; }
+
+  table {
+    padding-left: 2em; }
+
+  .pageHeader {
+    font-size: 2.75em;
+    margin-top: 2em; }
+
+  .productImage {
+    width: 250px; } }
+@media (min-width: 992px) {
+  table {
+    font-size: initial; }
+
+  .pageHeader {
+    font-size: 4em;
+    margin-top: 1.5em; }
+
+  .homeBoxHeader {
+    background-color: #333;
+    font-size: 2em; }
+
+  .newAPBanner {
+    font-size: 4em; } }
+td {
+  /*	border: solid black 1px;*/
+  padding: .15em .5em; }
+
+.colorSwatch {
+  padding: .75em 1.5em;
+  border-radius: .75em;
+  width: 2em;
+  height: 3em;
+  display: inline-block;
+  float: left;
+  margin-right: .5em; }
+
+.colorName {
+  text-transform: uppercase;
+  font-size: .85em; }
+
+.pantoneName {
+  text-transform: uppercase;
+  font-size: .75em; }
+
+/* text colors for color chart*/
+.pantoneYellow {
+  background-color: #ffdd00;
+  color: #ffdd00; }
+
+.ultraBlue {
+  background-color: #000a8b;
+  color: #000a8b; }
+
+.fireRed {
+  background-color: #e31837;
+  color: #e31837; }
+
+.violet {
+  background-color: #430098;
+  color: #430098; }
+
+.brilliantOrange {
+  background-color: #ff4612;
+  color: #ff4612; }
+
+.processBlue {
+  background-color: #0082ca;
+  color: #0082ca; }
+
+.emeraldGreen {
+  background-color: #00833e;
+  color: #00833e; }
+
+.black {
+  background-color: #2e2a25;
+  color: #2e2a25; }
+
+.reflexBlue {
+  background-color: #001689;
+  color: #001689; }
+
+.peacockBlue {
+  background-color: #005cb9;
+  color: #005cb9; }
+
+.metallicGold {
+  background-color: #88714c;
+  color: #88714c; }
+
+.metallicSilver {
+  background-color: #8b8d8d;
+  color: #8b8d8d; }
+
+.navyBlue {
+  background-color: #002d62;
+  color: #002d62; }
+
+.rhodamineRed {
+  background-color: #e70095;
+  color: #e70095; }
+
+.purple {
+  background-color: #783cbd;
+  color: #783cbd; }
+
+@media (min-width: 1200px) {
+  .colorName {
+    text-transform: uppercase;
+    font-size: 1.25em; }
+
+  .pantoneName {
+    text-transform: uppercase;
+    font-size: .75em; } }
+.footerDiv {
+  background: #1B2021;
+  justify-content: center;
+  border-top: solid .15em #fdb714;
+  padding-top: 1em; }
+
+.footerDiv a:link, .footerDiv a:visited, .footerDiv a:active {
+  color: #fdb714;
+  text-align: center;
+  font-weight: 100; }
+
+.footerDiv a:hover {
+  text-decoration: underline; }
+
+.footerDiv p {
+  color: #e8e8e8;
+  font-size: .75em;
+  text-align: center; }
+
+.bottomSpacer {
+  margin-bottom: 50em; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,16 @@
+/*Dark Grey: #333	   | RGB  51,51,51
+Dark Grey: #333	   | RGB  51,51,51
+Yellow:    #fdb714 | RGB  253,183,20
+Red:       #be1e2d | RGB  190,30,45*/
+
+:root{
+	/*colors */
+	--dark-grey:#333;
+	--yellow:#fdb714;
+	--red:#be1e2d;
+}
+
+//breakpoints
+$bp-large: 1200px;
+$bp-med:992px;
+$bp-small:768px;
