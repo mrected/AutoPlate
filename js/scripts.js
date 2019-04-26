@@ -1,1 +1,41 @@
-function copyrightDate(){var a=(new Date).getFullYear();document.getElementById("copyright").innerHTML="&copy; Autoplate 2000-"+a+" All Rights Reserved "}var navbarHeight=$(".navbar").height();$(window).scroll(function(){var a=$(".small-logo").height(),b=$(".big-logo").height(),c=0,d=a/b,e=$(window).scrollTop()*d,f=navbarHeight-e-34;f>navbarHeight&&(f=navbarHeight),f<c&&(f=c),f<0&&(f=0),$(".small-logo-container ").css({"padding-top":f});var g=e/a;g>1&&(g=1),g<0&&(g=0);var h=.4*g;e>1?$(".navbar").css({"box-shadow":"0 2px 3px rgba(0,0,0,"+h+")"}):$(".navbar").css({"box-shadow":"none"})});
+var navbarHeight = $('.navbar').height(); 
+
+$(window).scroll(function() {
+  // var navbarColor = "75,75,75";//color attr for rgba
+  var smallLogoHeight = $('.small-logo').height();
+  var bigLogoHeight = $('.big-logo').height();
+  
+  
+  var smallLogoEndPos = 0;
+  var smallSpeed = (smallLogoHeight / bigLogoHeight);
+  
+  var ySmall = ($(window).scrollTop() * smallSpeed); 
+  
+  var smallPadding = navbarHeight - ySmall -34;
+  if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
+  if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
+  if (smallPadding < 0) { smallPadding = 0; }
+  
+  $('.small-logo-container ').css({ "padding-top": smallPadding});
+  
+  var navOpacity = ySmall / smallLogoHeight; 
+  if  (navOpacity > 1) { navOpacity = 1; }
+  if (navOpacity < 0 ) { navOpacity = 0; }
+  // var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
+  // $('.navbar').css({"background-color": navBackColor});
+  
+  var shadowOpacity = navOpacity * 0.4;
+  if ( ySmall > 1) {
+    $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
+  } else {
+    $('.navbar').css({"box-shadow": "none"});
+  }
+  
+  
+  
+});
+
+ function copyrightDate(){
+  var coDate = new Date().getFullYear();
+  document.getElementById("copyright").innerHTML="&copy; Autoplate 2000-" + coDate + " All Rights Reserved ";
+  }

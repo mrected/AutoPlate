@@ -1,1 +1,290 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900|Patua+One|Racing+Sans+One);#mainContent,#outerDiv{min-height:100vh}body{background-color:#333;font-family:Lato,sans-serif;padding-top:2em;-webkit-font-smoothing:antialiased}h2,h3,h4,h5{font-family:'Patua One',sans-serif}.newAPBanner,.pageHeader{font-family:'Racing Sans One',times}h2{font-size:1.25em}.orgInfoBar{background-color:#444;border-bottom:solid .1em #fdb714}.orgInfo{color:#eee;text-align:right;margin:.25em 2em 0 0}.redTxt{color:#be1e2d}.yellowTxt{color:#fdb714}#carouselContainer{display:none}#mainContent{background-color:#fff;border-right:solid .25em #fdb714;border-left:solid .25em #fdb714;border-top:solid .25em #fdb714;padding-bottom:3em}.logoSolo{padding:.5em 0 0 4.75em}.pageHeader{color:#333;margin:3em 0 1em;padding-left:1em;border-bottom:solid .05em #be1e2d;font-size:1.5em;z-index:1000}.homeBox{padding:1em}.homeBoxHeader,.sectionTab{font-size:1.5em;font-variant:small-caps;background-color:#333;border-bottom:solid .1em #fdb714;padding:.05em 1em;display:inline-block;border-top-right-radius:10px}.homeBoxHeader{color:#fff;border-top-left-radius:10px;width:100%}.sectionTab{border-right:solid .1em #111;border-top:solid .05em #111;color:#fdb714;margin-left:-.8em;box-shadow:1px 3px 2px rgba(0,27,49,.5)}.carousel-inner>.item>img{margin:0 auto}.homeBox .btn,.homeBox img{margin-bottom:1em}.frameStyle{margin-right:.5em}.underline .btn{margin-bottom:.25em}.frameStyle img{max-width:163px;margin-bottom:.5em}.underline{border-bottom:solid .25em #eee;margin-bottom:2em}.templateBox{padding-top:6em}.pricingInfoHeader{border-bottom:solid .1em #333}table{font-size:.5em;font-weight:700}.productImage{margin-top:1em;margin-bottom:1em;max-width:250px}.priceCode{font-size:.65em;font-weight:900;border-radius:25px;border:.1em solid #888;padding:.15em .2em;vertical-align:super}caption{margin-left:-1000px}.footerDiv{background:#1B2021;justify-content:center;border-top:solid .15em #fdb714;padding-top:1em}.footerDiv a:active,.footerDiv a:link,.footerDiv a:visited{color:#fdb714;text-align:center;font-weight:100}.footerDiv a:hover{text-decoration:underline}.footerDiv p{color:#e8e8e8;font-size:.75em;text-align:center}.bottomSpacer{margin-bottom:50em}@media (min-width:450px){::-webkit-scrollbar{width:1em;background:#777}::-webkit-scrollbar-thumb{background:#bbb}table{font-size:.75em;font-weight:initial}.pageHeader{font-family:'Racing Sans One',times;font-size:2em;-webkit-mask-image:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,1)),color-stop(75%,rgba(0,0,0,.5)),to(rgba(0,0,0,1)))}.sectionTab{font-size:2.5em}.productImage{max-width:300px}}@media (min-width:600px){#carouselContainer{display:block;margin:0 -2.15em;z-index:1000}table{padding-left:2em}.pageHeader{font-size:2.75em;margin-top:2em}.productImage{width:250px}}@media (min-width:992px){table{font-size:initial}.pageHeader{font-size:4em;margin-top:1.5em}.homeBoxHeader{background-color:#333;font-size:2em}.newAPBanner{font-size:4em}}.note{font-style:italic;}
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900|Patua+One|Racing+Sans+One');
+
+
+/******* COLORS ************
+
+Dark Grey: #333	   | RGB  51,51,51
+Dark Grey: #333	   | RGB  51,51,51
+Yellow:    #fdb714 | RGB  253,183,20
+Red:       #be1e2d | RGB  190,30,45
+***********/
+
+
+/*********************************************************************
+top styles
+*/
+
+
+body{
+	background-color: #333;
+	font-family: 'Lato', sans-serif;
+  padding-top: 2em;
+  -webkit-font-smoothing: antialiased;
+}
+
+#outerDiv{
+  min-height: 100vh;
+}
+
+h2, h3, h4, h5{
+  font-family: 'Patua One', sans-serif;
+}
+
+h2{
+  font-size: 1.25em;
+}
+.orgInfoBar{
+	background-color: #444;
+	border-bottom: solid .1em #fdb714;
+}
+
+.orgInfo{
+	color:#eee;
+	text-align: right;
+	margin: .25em 2em 0 0;
+	
+}
+
+.redTxt{
+  color: #be1e2d;
+}
+
+.yellowTxt{
+	color: #fdb714;
+}
+
+#carouselContainer{
+  display: none;
+}
+
+.note{
+  font-style:italic;
+}
+
+/*********************************************************************
+main content styles
+*/
+
+.newAPBanner{
+  font-family: 'Racing Sans One', times;
+}
+
+#mainContent{
+  background-color: #fff;
+  min-height: 100vh;
+  border-right: solid .25em #fdb714;
+  border-left: solid .25em #fdb714;
+  border-top: solid .25em #fdb714;
+  padding-bottom: 3em;
+}
+
+.logoSolo{
+  padding: .5em 0 0 4.75em;
+}
+
+.pageHeader{
+  font-family: 'Racing Sans One', times;
+  color:#333;
+  margin: 3em 0 1em 0;
+  padding-left: 1em;
+  border-bottom: solid .05em #be1e2d;
+  font-size: 1.5em;
+  z-index: 1000;
+}
+
+.homeBox{
+  
+  padding: 1em;
+}
+
+.homeBoxHeader{
+  font-size: 1.5em;
+  font-variant: small-caps;
+  background-color: #333;
+  border-bottom: solid .1em #fdb714;
+  color: #fff;
+  padding: .05em  1em;
+  display: inline-block;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  width: 100%;
+}
+
+.sectionTab{
+  font-size: 1.5em;
+  font-variant: small-caps;
+  background-color: #333;
+  border-right: solid .1em #111;
+  border-top: solid .05em #111;
+  border-bottom: solid .1em #fdb714;
+  color: #fdb714;
+  padding: .05em  1em;
+  display: inline-block;
+  border-top-right-radius: 10px;
+  margin-left: -.8em;
+  box-shadow: 1px 3px 2px rgba(0,27,49,.5);
+}
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.homeBox .btn, .homeBox img{
+  margin-bottom: 1em;
+}
+
+.frameStyle{
+  margin-right: .5em;
+}
+
+.underline .btn{
+  margin-bottom: .25em;
+}
+
+.frameStyle img{
+  max-width: 163px;
+  margin-bottom: .5em;
+}
+
+.underline{
+  border-bottom: solid .25em #eee;
+  margin-bottom: 2em;
+}
+
+.templateBox{
+  padding-top: 6em;
+}
+
+.pricingInfoHeader{
+  border-bottom: solid .1em #333;
+}
+
+table{
+    font-size: .5em;
+    font-weight: bold;
+  }
+
+.productImage{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  max-width: 250px;
+}
+
+.priceCode{
+  font-size: .65em;
+  font-weight:900;
+  border-radius: 25px;
+  border: .1em solid #888;
+  padding: .15em .2em;
+  vertical-align: super;
+}
+
+caption{
+  margin-left: -1000px;
+}
+
+/*Footer
+********************************************************/
+
+.footerDiv{
+  background:#1B2021;
+  justify-content:center;
+  border-top: solid .15em #fdb714;
+  padding-top: 1em;
+}
+
+  .footerDiv a:link, .footerDiv a:visited, .footerDiv a:active{
+    color: #fdb714;
+    text-align: center;
+    font-weight: 100;
+  }
+
+  .footerDiv a:hover{
+    text-decoration: underline;
+    
+  }
+
+   .footerDiv p{
+    color:#e8e8e8;
+    font-size: .75em;
+    text-align: center;
+   }
+
+   .bottomSpacer{
+    margin-bottom: 50em;
+   }
+
+/*Media Queries
+********************************************************/
+
+@media (min-width: 450px){
+
+  ::-webkit-scrollbar {
+    width: 1em;
+    background:#777;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      background: #bbb;
+  }
+
+  table{
+    font-size: .75em;
+    font-weight: initial;
+  }
+  .pageHeader{
+    font-family: 'Racing Sans One', times;
+    font-size: 2em;
+     -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(75%, rgba(0,0,0,.5)), to(rgba(0,0,0,1)));
+   }
+
+   .sectionTab{
+    font-size: 2.5em;
+   }
+
+   .productImage{
+    max-width: 300px;
+   }
+}
+
+@media (min-width: 600px){
+  #carouselContainer{
+    display: block;
+    margin: 0 -2.15em;
+    z-index: 1000;
+  }
+
+  table{
+    padding-left: 2em;
+  }
+  .pageHeader{
+    font-size: 2.75em;
+    margin-top:2em;
+  }
+
+  .productImage{
+    width: 250px;
+  }
+
+}
+
+@media (min-width: 992px){
+
+  table{
+    font-size: initial;
+  }
+  .pageHeader{
+    font-size: 4em;
+    margin-top: 1.5em;
+  }
+  .homeBoxHeader{
+    background-color: #333;
+    font-size: 2em
+  }
+
+  .newAPBanner{
+    font-size: 4em;
+  }
+
+
+}
