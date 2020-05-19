@@ -45,6 +45,7 @@ h2{
 	
 }
 
+
 .redTxt{
   color: #be1e2d;
 }
@@ -52,6 +53,16 @@ h2{
 .yellowTxt{
 	color: #fdb714;
 }
+.bigTxt{
+  font-size: 2rem;
+  font-weight: bold;
+}
+.highlighText{
+  display: inline-block;
+}
+ .highlight{
+   background-color: #fce0a0;
+ }
 
 #carouselContainer{
   display: none;
