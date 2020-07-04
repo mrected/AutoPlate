@@ -80,7 +80,7 @@ h2 {
   grid-template-columns: 1fr 2fr;
   grid-template-rows: repeat(3, auto);
   -ms-grid-columns: 1fr 2fr;
-  -ms-grid-rows: 1fr 1fr 1fr auto;
+  -ms-grid-rows: auto;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   align-items: start;
@@ -105,7 +105,7 @@ h2 {
   -ms-grid-row: 3;
   -ms-grid-row-span: 1;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
+  -ms-grid-column-span: 2;
 }
 .image-div {
   grid-area: 1 / 2 / 3 / 3;
