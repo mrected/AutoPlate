@@ -177,7 +177,7 @@ main content styles
 }
 
 .sectionTab {
-  font-size: 1.5em;
+  font-size: 3.5rem;
   font-variant: small-caps;
   background-color: #333;
   border-right: solid 0.1em #111;
@@ -285,7 +285,7 @@ main content styles
 }
 
 table {
-  font-size: 0.5em;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
@@ -348,7 +348,7 @@ caption {
   }
 
   table {
-    font-size: 0.75em;
+    font-size: 1.5rem;
     font-weight: initial;
   }
   .pageHeader {
@@ -364,9 +364,7 @@ caption {
     );
   }
 
-  .sectionTab{
-    font-size: 2.5em;
-   }
+  
 }
 
 @media (min-width: 600px) {
@@ -378,17 +376,19 @@ caption {
 
   table {
     padding-left: 2em;
+    font-size: 1.5rem;
   }
   .pageHeader {
-    font-size: 2.75rem;
+    font-size: 4rem;
     margin-top: 2em;
   }
+  
 }
 
 @media (min-width: 992px){
 
   table{
-    font-size: initial;
+    font-size: 2rem;
   }
   .pageHeader{
     font-size: 4em;
@@ -402,26 +402,11 @@ caption {
   .newAPBanner{
     font-size: 7rem;
   }
-
+  
 
 }
 
-@media (max-width: 991px) {
-  .pricing-div {
-    grid-area: 3 / 1 / 4 / 3;
-    -ms-grid-row: 3;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-  .table-div {
-    grid-area: 4 / 1 / 5 / 3;
-    -ms-grid-row: 4;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-  }
-}
+
 
 @media (max-width: 800px) {
   .info-grid {
@@ -523,6 +508,35 @@ caption {
     -ms-grid-column-span: 1;
   }
   
+  .standard-text{
+    font-size: 1.4rem;
+  }
+  
+  .sectionTab{
+    font-size: 2.5rem;
+  }
+
+}
+
+@media (max-width: 992px) {
+  .pricing-div {
+    grid-area: 3 / 1 / 4 / 3;
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+  .table-div {
+    grid-area: 4 / 1 / 5 / 3;
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+  }
+
+  .sectionTab{
+    font-size: 2.3rem;
+  }
   
 }
 
