@@ -159,6 +159,11 @@ main content styles
   z-index: 1000;
 }
 
+.pageSplitter{
+  border-bottom: solid 3px #be1e2d;
+  margin: 50px 0;
+}
+
 .homeBox {
   padding: 1em;
 }
