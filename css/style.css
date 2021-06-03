@@ -33,6 +33,9 @@ h5 {
 h2 {
   font-size: 1.25em;
 }
+th, td{
+  text-align: center;
+}
 .standard-text{
   font-size: 1.75rem;
 }
