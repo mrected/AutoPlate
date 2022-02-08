@@ -12,6 +12,10 @@ Red:       #be1e2d | RGB  190,30,45
 top styles
 */
 
+.unavailable{
+  color: #888;
+}
+
 body {
   background-color: #333;
   font-family: 'Lato', sans-serif;
