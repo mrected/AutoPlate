@@ -232,6 +232,18 @@ main content styles
   -ms-grid-column-span: 1;
 }
 
+.aluPlates {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  grid-column: 1 / 3;
+}
+
+.aluPlates img {
+  max-width: 200px;
+  height: auto;
+}
+
 /* fixes ie11 garbage */
 .frame-container > div:nth-child(2n){
   -ms-grid-row: 1;
