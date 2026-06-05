@@ -1,34 +1,31 @@
-var navbarHeight = $('.navbar').height(); 
+const navbarHeight = document.querySelector('.navbar').offsetHeight;
 
-$(window).scroll(function() {
-  // var navbarColor = "75,75,75";//color attr for rgba
-  var smallLogoHeight = $('.small-logo').height();
-  var bigLogoHeight = $('.big-logo').height();
+window.addEventListener('scroll', () => {
+  let smallLogoHeight = $('.small-logo').height();
+  let bigLogoHeight = $('.big-logo').height();
   
   
-  var smallLogoEndPos = 0;
-  var smallSpeed = (smallLogoHeight / bigLogoHeight);
+  let smallLogoEndPos = 0;
+  let smallSpeed = (smallLogoHeight / bigLogoHeight);
   
-  var ySmall = ($(window).scrollTop() * smallSpeed); 
+  let ySmall = ($(window).scrollTop() * smallSpeed); 
   
-  var smallPadding = navbarHeight - ySmall -34;
+  let smallPadding = navbarHeight - ySmall -34;
   if (smallPadding > navbarHeight) { smallPadding = navbarHeight; }
   if (smallPadding < smallLogoEndPos) { smallPadding = smallLogoEndPos; }
   if (smallPadding < 0) { smallPadding = 0; }
   
-  $('.small-logo-container ').css({ "padding-top": smallPadding});
+  document.querySelector('.small-logo-container').style.paddingTop = smallPadding;
   
-  var navOpacity = ySmall / smallLogoHeight; 
+  let navOpacity = ySmall / smallLogoHeight; 
   if  (navOpacity > 1) { navOpacity = 1; }
   if (navOpacity < 0 ) { navOpacity = 0; }
-  // var navBackColor = 'rgba(' + navbarColor + ',' + navOpacity + ')';
-  // $('.navbar').css({"background-color": navBackColor});
   
-  var shadowOpacity = navOpacity * 0.4;
+  let shadowOpacity = navOpacity * 0.4;
   if ( ySmall > 1) {
-    $('.navbar').css({"box-shadow": "0 2px 3px rgba(0,0,0," + shadowOpacity + ")"});
+    document.querySelector('.navbar').style.boxShadow = "0 2px 3px rgba(0,0,0," + shadowOpacity + ")";
   } else {
-    $('.navbar').css({"box-shadow": "none"});
+    document.querySelector('.navbar').style.boxShadow = "none";
   }
   
   
@@ -36,6 +33,6 @@ $(window).scroll(function() {
 });
 
  function copyrightDate(){
-  var coDate = new Date().getFullYear();
+  let coDate = new Date().getFullYear();
   document.getElementById("copyright").innerHTML="&copy; Autoplate 2000-" + coDate + " All Rights Reserved ";
   }
