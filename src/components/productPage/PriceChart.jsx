@@ -1,33 +1,34 @@
-function PriceChart(plates) {
-    console.log(plates)
-    const items = plates.plateData
-    const prices = items.categories.slice(0)
+function PriceChart({ plateData, type }) {
 
+    const typeData = plateData && plateData[type];
+    const priceData = typeData && typeData.priceData;
+    const prices = priceData ? priceData.prices : [];
+    const counts = typeData ? typeData.counts : [];
     return (
+
 
         <div className="table-div">
             <div className="table-responsive">
                 <table className="table table-condensed table-hover">
-                    <caption>{items.caption}</caption>
+                    <caption>{priceData ? priceData.caption : ''}</caption>
                     <thead>
                         <tr>
                             <th>Item <i className="fa fa-hashtag" aria-hidden="true"></i></th>
-                            <th>{items.type === "plate" ? "Material" : "Frame Type"}</th>
-                            {items.columnHeaders.map((header, i) => <th key={`${header}${i}`}>{header}</th>)}
-                            <th><span className="badge">6R</span></th>
+                            <th>{plateData.form === "plate" ? "Material" : "Frame Type"}</th>
+                            {counts.map((count, i) => <th key={`${count}${i}`}>{count}</th>)}
+                            <th><span className="badge">{plateData.badge}</span></th>
                         </tr>
                     </thead>
                     <tbody>
-                        {prices.map((price) => (
-                            <tr key={price.id}>
+                        {prices.map((price, i) => (
+                            <tr key={`${price}${i}`}>
                                 <td>{price.item}</td>
                                 <td>{price.description}</td>
-                                <td>{price["125"]}</td>
-                                <td>{price["250"]}</td>
-                                <td>{price["500"]}</td>
-                                <td>{price["1000"]}</td>
-                                <td>{price["2000"]}</td>
-                                <td>{price["5000"]}</td>
+                                {counts.map((count, i) => (
+                                    <td key={`${count}${i}`}>
+                                        {price[count] != null ? Number(price[count]).toFixed(2) : ''}
+                                    </td>
+                                ))}
                                 <td>&nbsp;</td>
                             </tr>
                         ))}

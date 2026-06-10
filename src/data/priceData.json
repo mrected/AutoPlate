@@ -1,0 +1,107 @@
+{
+  "screenPrinted": {
+    "heading": "Screen Printed License Plates",
+    "form": "plate",
+    "badge": "6R",
+    "poly": {
+      "counts": [
+        "125",
+        "250",
+        "500",
+        "1000",
+        "2000",
+        "5000"
+      ],
+      "priceData": {
+        "caption": "Price chart for screen-printed poly plates.",
+        "prices": [
+          {
+            "item": "075",
+            "description": ".075\" Premium Weight",
+            "125": 2.95,
+            "250": 2.95,
+            "500": 2.95,
+            "1000": 2.95,
+            "2000": 2.95,
+            "5000": 2.95
+          },
+          {
+            "item": "055",
+            "description": ".055\" Standard Weight",
+            "125": 2.37,
+            "250": 1.94,
+            "500": 1.66,
+            "1000": 1.52,
+            "2000": 1.39,
+            "5000": 1.35
+          },
+          {
+            "item": "035",
+            "description": ".035\" Medium Weight",
+            "125": 1.71,
+            "250": 1.40,
+            "500": 1.20,
+            "1000": 1.08,
+            "2000": 0.97,
+            "5000": 0.94
+          },
+          {
+            "item": "023",
+            "description": ".023\" Medium Weight",
+            "125": 1.54,
+            "250": 1.14,
+            "500": 0.95,
+            "1000": 0.79,
+            "2000": 0.72,
+            "5000": 0.66
+          },
+          {
+            "item": "",
+            "description": "Each Additional Color",
+            "125": 0.58,
+            "250": 0.33,
+            "500": 0.22,
+            "1000": 0.18,
+            "2000": 0.15,
+            "5000": 0.13
+          }
+        ]
+      }
+    },
+    "aluminum": {
+      "counts": [
+        "125",
+        "250",
+        "500",
+        "1000",
+        "2000",
+        "5000"
+      ],
+      "priceData": {
+        "caption": "Price chart for screen-printed poly plates.",
+        "prices": [
+          {
+            "item": "024",
+            "description": ".024\" Aluminum",
+            "125": 4.72,
+            "250": 3.65,
+            "500": 3.10,
+            "1000": 2.90,
+            "2000": 2.88,
+            "5000": 2.85
+          },
+          {
+            "item": "",
+            "description": "Each Additional Color",
+            "125": 0.60,
+            "250": 0.40,
+            "500": 0.29,
+            "1000": 0.22,
+            "2000": 0.20,
+            "5000": 0.19
+          }
+        ]
+      }
+    }
+  }
+}

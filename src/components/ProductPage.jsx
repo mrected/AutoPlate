@@ -1,7 +1,6 @@
 import { createRoot } from 'react-dom/client';
-import './productPage/PriceChart';
 import PriceChart from './productPage/PriceChart';
-import plateData from '../data/plateData.json';
+import plateData from '../data/priceData.json';
 
 function ProductPage() {
 
@@ -71,7 +70,10 @@ function ProductPage() {
                         <img src="images/Prod_SPPlates.png" className="productImage"
                             alt="Screen Printed Poly License Plates" />
                     </div>
-                    <PriceChart plateData={plateData.screenPrinted}/>                  
+                    <PriceChart
+                        plateData={plateData.screenPrinted}
+                        type="poly"
+                    />                  
                 </div>
             </div>
 
@@ -113,7 +115,11 @@ function ProductPage() {
                                 alt="Screen Printed Aluminum License Plates" />
                         </div>
 
-                        <PriceChart plateData={plateData.spAluminum}/> 
+                        <PriceChart
+                            plateData={plateData.screenPrinted}
+                            type="aluminum"
+                        />  
+                        
                             <div className="aluPlates">
                                 <img src="images/aluWhite.png" alt="white aluminum license plate" />
                                 <img src="images/aluNatural.png" alt="natural aluminum license plate" />
