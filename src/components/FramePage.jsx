@@ -1,0 +1,6 @@
+import { AppShell } from '../shell/AppShell'
+import { PriceTable } from './PriceTable'
+
+export default function FramePage({ frame }) {
+  return <AppShell><main className="mainContent"><div className="container"><h1 className="pageHeader">{frame.title}</h1><div className="info-grid"><div className="info-div"><h2 className="sectionTab">{frame.subtitle}</h2><p className="standard-text">{frame.description}</p></div><div className="pricing-div"><h3 className="pricingInfoHeader">Pricing &amp; Info</h3><ul className="standard-text">{frame.notes.map((note) => <li key={note}>{note}</li>)}</ul></div><div className="image-div"><img className="img-responsive productImage" src={frame.image} alt={frame.title} /></div><PriceTable rows={[frame.price]} badge="5R" quantities={['250','500','1000','2000','5000']} secondHeader="Frame Type" caption={`Price chart for ${frame.title.toLowerCase()}.`} /></div><hr className="pageSplitter" /><h2 className="sectionTab">Standard Styles</h2><div className="row">{frame.styles.map((style) => <div className="col-sm-4 homeBox" id={style.id} key={style.id}><img className="img-responsive" src={style.image} alt={style.label} /><a className="btn btn-primary" href={`templates.html#${style.id}`}>Download {style.label} template</a></div>)}</div></div></main></AppShell>
+}

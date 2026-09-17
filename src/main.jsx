@@ -6,6 +6,12 @@ import './styles/react-shell.css'
 import { AppShell } from './shell/AppShell'
 import ProductPage from './components/ProductPage'
 import screenPrinted from './data/screenPrinted.json'
+import digital from './data/digital.json'
+import polyCard from './data/polyCard.json'
+import mcycle from './data/mcycle.json'
+import frames from './data/frames.json'
+import FramePage from './components/FramePage'
+import { ArtPage, TemplatesPage, PrivacyPage } from './components/SupportPages'
 
 const cards = [
   ['screenPrinted.html', 'Screen Printed License Plates', 'screenPlates.png', 'Available in White and Natural Aluminum or 4 Hi-Gloss Polyethylene thicknesses for spot color applications.'],
@@ -25,4 +31,5 @@ function Home() {
 }
 
 const root = document.getElementById('root')
-if (root) createRoot(root).render(document.body.dataset.page === 'screen-printed' ? <ProductPage product={screenPrinted} /> : <AppShell><Home /></AppShell>)
+const page = document.body.dataset.page
+if (root) createRoot(root).render(page === 'screen-printed' ? <ProductPage product={screenPrinted} /> : page === 'digital' ? <ProductPage product={digital} /> : page === 'poly-card' ? <ProductPage product={polyCard} /> : page === 'motorcycle' ? <ProductPage product={mcycle} /> : page === 'raised-frames' ? <FramePage frame={frames.raised} /> : page === 'chrome-frames' ? <FramePage frame={frames.chrome} /> : page === 'art' ? <ArtPage /> : page === 'templates' ? <TemplatesPage /> : page === 'privacy' ? <PrivacyPage /> : <AppShell><Home /></AppShell>)
