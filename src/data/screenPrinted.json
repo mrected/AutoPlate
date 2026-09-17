@@ -1,0 +1,7 @@
+{
+  "title": "Screen Printed License Plates",
+  "sections": [
+    {"title":"Hi-Gloss Polyethylene","description":"AutoPlate’s unique Hi-Gloss Polyethylene License Plates are available in 4 thicknesses with Screen Printed spot color imprint. Plate size is 6\" x 12\". Our exclusive .075\" Premium Weight and .055\" Standard Weight Hi-Gloss Poly license plates are for permanent use where a front state license plate is not required. Hi-Gloss .035\" and .023\" weights are primarily for temporary auto dealer use. Full bleed printing available at no extra charge.","template":"templates.html#polyplate","image":"/images/Prod_SPPlates.png","rows":[["075",".075\" Premium Weight",[3.28,2.46,2.08,1.96,1.89,1.83]],["055",".055\" Standard Weight",[2.54,1.94,1.66,1.52,1.39,1.35]],["035",".035\" Medium Weight",[1.93,1.40,1.22,1.11,1.07,1.04]],["023",".023\" Light Weight",[1.72,1.18,0.99,0.88,0.81,0.76]],["","Each Additional Color",[0.64,0.33,0.22,0.18,0.15,0.13]]]},
+    {"title":"Hi-Gloss Aluminum","description":".024\" Non-embossed White or Natural Aluminum with Screen Printed spot color imprint. Plate size is 6\" x 12\". .024\" Aluminum License Plates are for permanent use where a front state license plate is not required and a metal plate is preferred.","template":"templates.html#aluplate","image":"/images/Prod_SPAluPlates.png","rows":[["024",".024\" Aluminum",[4.87,3.65,3.10,2.90,2.88,2.85]],["","Each Additional Color",[0.68,0.40,0.29,0.22,0.20,0.19]]]}
+  ]
+}

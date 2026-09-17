@@ -1,3 +1,8 @@
+.react-shell-page,
+body {
+  padding-top: 5em;
+}
+
 .nav-button {
   border: 0;
   color: #ecf0f1;
@@ -20,6 +25,14 @@
 
 .navbar-collapse.in {
   display: block;
+}
+
+@media (min-width: 768px) {
+  .navbar-collapse {
+    display: block;
+    height: auto !important;
+    overflow: visible !important;
+  }
 }
 
 .dropdown-menu {

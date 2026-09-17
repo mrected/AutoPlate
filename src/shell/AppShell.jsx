@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const productLinks = [
   ['screenPrinted.html', 'Screen Printed Plates'],
@@ -11,8 +11,11 @@ const productLinks = [
 
 function Menu({ label, children }) {
   const [open, setOpen] = useState(false)
-  return <li className={`dropdown${open ? ' open' : ''}`}>
-    <button className="dropdown-toggle nav-button" type="button" aria-expanded={open} onClick={() => setOpen(!open)}>
+  const closeIfFocusLeaves = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) setOpen(false)
+  }
+  return <li className={`dropdown${open ? ' open' : ''}`} onMouseEnter={() => setOpen(true)} onMouseLeave={() => setOpen(false)} onFocus={() => setOpen(true)} onBlur={closeIfFocusLeaves}>
+    <button className="dropdown-toggle nav-button" type="button" aria-expanded={open}>
       {label} <span className="caret" />
     </button>
     {open && <ul className="dropdown-menu">{children}</ul>}
@@ -21,20 +24,42 @@ function Menu({ label, children }) {
 
 function Header() {
   const [mobileOpen, setMobileOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  const navbarRef = useRef(null)
+  const smallLogoRef = useRef(null)
+  const bigLogoRef = useRef(null)
+  const smallLogoContainerRef = useRef(null)
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 1)
-    window.addEventListener('scroll', onScroll)
-    return () => window.removeEventListener('scroll', onScroll)
+    const updateLogo = () => {
+      const navbar = navbarRef.current
+      const smallLogo = smallLogoRef.current
+      const bigLogo = bigLogoRef.current
+      const container = smallLogoContainerRef.current
+      if (!navbar || !smallLogo || !bigLogo || !container) return
+      const navbarHeight = navbar.offsetHeight
+      const smallHeight = smallLogo.offsetHeight
+      const bigHeight = bigLogo.offsetHeight || 1
+      const ySmall = window.scrollY * (smallHeight / bigHeight)
+      const padding = Math.max(0, Math.min(navbarHeight, navbarHeight - ySmall - 34))
+      container.style.paddingTop = `${padding}px`
+      const opacity = Math.max(0, Math.min(1, ySmall / (smallHeight || 1)))
+      navbar.style.boxShadow = ySmall > 1 ? `0 2px 3px rgba(0,0,0,${opacity * 0.4})` : 'none'
+    }
+    updateLogo()
+    window.addEventListener('scroll', updateLogo)
+    window.addEventListener('resize', updateLogo)
+    return () => {
+      window.removeEventListener('scroll', updateLogo)
+      window.removeEventListener('resize', updateLogo)
+    }
   }, [])
   return <>
-    <nav className={`navbar navbar-fixed-top navbar-default${scrolled ? ' scrolled' : ''}`}>
+    <nav ref={navbarRef} className="navbar navbar-fixed-top navbar-default">
       <div className="container-fluid">
         <div className="navbar-header">
           <button className="navbar-toggle" type="button" aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}>
             <span className="sr-only">Toggle navigation</span><span className="icon-bar" /><span className="icon-bar" /><span className="icon-bar" />
           </button>
-          <div className="small-logo-container"><a href="index.html"><img className="small-logo img-responsive" src="/images/AutoPlate-NavLogo.png" alt="AutoPlate.net Logo" /></a></div>
+          <div ref={smallLogoContainerRef} className="small-logo-container"><a href="index.html"><img ref={smallLogoRef} className="small-logo img-responsive" src="/images/AutoPlate-NavLogo.png" alt="AutoPlate.net Logo" /></a></div>
         </div>
         <div className={`navbar-collapse${mobileOpen ? ' in' : ''}`}>
           <ul className="nav navbar-nav navbar-right">
@@ -46,7 +71,7 @@ function Header() {
         <div className="row"><div className="col-md-12 orgInfoBar"><p className="orgInfo">asi / <span className="yellowTxt">37572</span> | SAGE: <span className="yellowTxt">63638</span> | UPIC: <span className="yellowTxt">Autop354</span></p></div></div>
       </div>
     </nav>
-    <div className="container-fluid big-logo-row"><div className="container"><div className="row logoRow"><div className="col-md-12 big-logo-container"><a href="index.html"><img className="big-logo img-responsive" src="/images/AutoPlate-Logo.png" alt="AutoPlate.net Logo" /></a></div></div></div></div>
+    <div className="container-fluid big-logo-row"><div className="container"><div className="row logoRow"><div className="col-md-12 big-logo-container"><a href="index.html"><img ref={bigLogoRef} className="big-logo img-responsive" src="/images/AutoPlate-Logo.png" alt="AutoPlate.net Logo" /></a></div></div></div></div>
   </>
 }
 

@@ -4,6 +4,8 @@ import '../css/style.css'
 import '../css/navLogo.css'
 import './styles/react-shell.css'
 import { AppShell } from './shell/AppShell'
+import ProductPage from './components/ProductPage'
+import screenPrinted from './data/screenPrinted.json'
 
 const cards = [
   ['screenPrinted.html', 'Screen Printed License Plates', 'screenPlates.png', 'Available in White and Natural Aluminum or 4 Hi-Gloss Polyethylene thicknesses for spot color applications.'],
@@ -23,4 +25,4 @@ function Home() {
 }
 
 const root = document.getElementById('root')
-if (root) createRoot(root).render(<AppShell><Home /></AppShell>)
+if (root) createRoot(root).render(document.body.dataset.page === 'screen-printed' ? <ProductPage product={screenPrinted} /> : <AppShell><Home /></AppShell>)
