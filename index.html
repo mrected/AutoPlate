@@ -15,10 +15,6 @@
 	<link href="images/APFavicon.ico" rel="icon" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="css/navLogo.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-		crossorigin="anonymous"></script>
 	<style type="text/css">
 		body {
 			padding-top: 5em;
@@ -27,7 +23,9 @@
 </head>
 
 <body>
-	<div class="container-fluid" id="outerDiv">
+	<div id="root"></div>
+	<!-- React owns the shared shell and page content. -->
+	<div id="legacy-home-content" hidden>
 		<nav class="navbar navbar-fixed-top navbar-default ">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -209,15 +207,11 @@
 			</div>
 		</div><!--main content end-->
 
-	</div><!--outerDiv-->
-
-	<div class="container-fluid footerDiv">
-		<p><span id="copyright"></span> | <a href="privacyPolicy.html">Privacy Policy</a></p>
 	</div>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-	<script type="text/javascript" src="js/scripts.js"></script>
-	<script type="text/javascript">copyrightDate();</script>
+	</div>
+
+	<script type="module" src="/src/main.jsx"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178033463-1"></script>
 	<script>

@@ -1,0 +1,33 @@
+.nav-button {
+  border: 0;
+  color: #ecf0f1;
+  background: #333;
+  font-size: 1.25em;
+  line-height: 20px;
+  padding: 15px;
+}
+
+.nav-button:hover,
+.nav-button:focus,
+.dropdown.open .nav-button {
+  color: #4d4d4f;
+  background: #fdb714;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.in {
+  display: block;
+}
+
+.dropdown-menu {
+  display: block;
+}
+
+.divider {
+  margin: 8px 0;
+  border: 0;
+  border-top: 1px solid #f62813;
+}
